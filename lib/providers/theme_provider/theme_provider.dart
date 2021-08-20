@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_riverpod_tutorial/providers/storage_provider/storage_provider.dart';
+import 'package:flutter_riverpod_tutorial/utils/functions.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 
 final themeNotifierProvider =
@@ -14,9 +15,9 @@ class ThemeNotifier extends StateNotifier<ThemeData> {
   final darkTheme = ThemeData(
     fontFamily: "Poppins",
     primarySwatch: Colors.grey,
-    primaryColor: Colors.black,
+    primaryColor: hexToColor("#1814E4"),
     brightness: Brightness.dark,
-    backgroundColor: const Color(0xFF212121),
+    scaffoldBackgroundColor: hexToColor("#191D21"),
     accentColor: Colors.white,
     accentIconTheme: IconThemeData(color: Colors.black),
     dividerColor: Colors.black12,
@@ -25,9 +26,9 @@ class ThemeNotifier extends StateNotifier<ThemeData> {
   final lightTheme = ThemeData(
     fontFamily: "Poppins",
     primarySwatch: Colors.grey,
-    primaryColor: Colors.white,
+    primaryColor: hexToColor("#FA7F35"),
     brightness: Brightness.light,
-    backgroundColor: const Color(0xFFE5E5E5),
+    scaffoldBackgroundColor: const Color(0xFFE5E5E5),
     accentColor: Colors.black,
     accentIconTheme: IconThemeData(color: Colors.white),
     dividerColor: Colors.white54,
