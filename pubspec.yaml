@@ -3,7 +3,7 @@ description: A new Flutter project.
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `pub publish`. This is preferred for private packages.
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+publish_to: "none" # Remove this line if you wish to publish to pub.dev
 
 # The following defines the version and build number for your application.
 # A version number is three numbers separated by dots, like 1.2.43
@@ -24,10 +24,11 @@ dependencies:
   flutter:
     sdk: flutter
 
-
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
+  flutter_secure_storage: ^4.2.1
+  flutter_riverpod: ^0.14.0+3
 
 dev_dependencies:
   flutter_test:
@@ -38,7 +39,6 @@ dev_dependencies:
 
 # The following section is specific to Flutter.
 flutter:
-
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
@@ -60,12 +60,55 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
-  #         style: italic
+  fonts:
+    - family: Poppins
+      fonts:
+        - asset: assets/poppins_font/Poppins-Thin.ttf
+          weight: 100
+        - asset: assets/poppins_font/Poppins-ThinItalic.ttf
+          weight: 100
+          style: italic
+        - asset: assets/poppins_font/Poppins-ExtraLight.ttf
+          weight: 200
+        - asset: assets/poppins_font/Poppins-ExtraLightItalic.ttf
+          weight: 200
+          style: italic
+        - asset: assets/poppins_font/Poppins-Light.ttf
+          weight: 300
+        - asset: assets/poppins_font/Poppins-LightItalic.ttf
+          weight: 300
+          style: italic
+        - asset: assets/poppins_font/Poppins-Regular.ttf
+          weight: 400
+        - asset: assets/poppins_font/Poppins-Italic.ttf
+          weight: 400
+          style: italic
+        - asset: assets/poppins_font/Poppins-Medium.ttf
+          weight: 500
+        - asset: assets/poppins_font/Poppins-MediumItalic.ttf
+          weight: 500
+          style: italic
+        - asset: assets/poppins_font/Poppins-SemiBold.ttf
+          weight: 600
+        - asset: assets/poppins_font/Poppins-SemiBoldItalic.ttf
+          weight: 600
+          style: italic
+        - asset: assets/poppins_font/Poppins-Bold.ttf
+          weight: 700
+        - asset: assets/poppins_font/Poppins-BoldItalic.ttf
+          weight: 700
+          style: italic
+        - asset: assets/poppins_font/Poppins-ExtraBold.ttf
+          weight: 800
+        - asset: assets/poppins_font/Poppins-ExtraBoldItalic.ttf
+          weight: 800
+          style: italic
+        - asset: assets/poppins_font/Poppins-Black.ttf
+          weight: 900
+        - asset: assets/poppins_font/Poppins-BlackItalic.ttf
+          weight: 900
+          style: italic
+
   #   - family: Trajan Pro
   #     fonts:
   #       - asset: fonts/TrajanPro.ttf
