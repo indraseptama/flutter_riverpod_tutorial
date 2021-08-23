@@ -28,7 +28,7 @@ class ThemeNotifier extends StateNotifier<ThemeData> {
     primarySwatch: Colors.grey,
     primaryColor: hexToColor("#FA7F35"),
     brightness: Brightness.light,
-    scaffoldBackgroundColor: const Color(0xFFE5E5E5),
+    scaffoldBackgroundColor: Colors.white,
     accentColor: Colors.black,
     accentIconTheme: IconThemeData(color: Colors.white),
     dividerColor: Colors.white54,
