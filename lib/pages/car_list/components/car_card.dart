@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod_tutorial/pages/car_detail/car_detail.dart';
 import 'package:flutter_riverpod_tutorial/utils/functions.dart';
 
 class CarCard extends StatelessWidget {
@@ -25,12 +26,7 @@ class CarCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        // Navigator.push(
-        //   context,
-        //   MaterialPageRoute(
-        //     builder: (context) => CarList(),
-        //   ),
-        // );
+        Navigator.pushNamed(context, CarDetail.PATH, arguments: id);
       },
       child: Container(
         height: height,

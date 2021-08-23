@@ -46,4 +46,10 @@ class CarService {
     int index = carList.indexOf(car);
     carList[index].isFavorite = isFavorite;
   }
+
+  Future<Car> getCarById(int id) async {
+    return Future.delayed(Duration(milliseconds: 200), () {
+      return carList.firstWhere((car) => car.id == id);
+    });
+  }
 }

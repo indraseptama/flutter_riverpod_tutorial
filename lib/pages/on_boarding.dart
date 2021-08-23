@@ -60,12 +60,7 @@ class OnBoarding extends StatelessWidget {
               padding: EdgeInsets.symmetric(horizontal: 32),
               child: InkWell(
                 onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => CarList(),
-                    ),
-                  );
+                  Navigator.pushNamed(context, CarList.PATH);
                 },
                 child: Container(
                   padding: EdgeInsets.symmetric(vertical: 16),

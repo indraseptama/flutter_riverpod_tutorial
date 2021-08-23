@@ -27,4 +27,10 @@ class CarProvider extends StateNotifier<AsyncValue<List<Car>>> {
     await _carService.setFavoriteById(id, isFavorite);
     loadData();
   }
+
+  Future<Car> getCarById(int id) async {
+    Car car = await _carService.getCarById(id);
+    loadData();
+    return car;
+  }
 }

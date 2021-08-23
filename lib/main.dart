@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_riverpod_tutorial/pages/car_detail/car_detail.dart';
 import 'package:flutter_riverpod_tutorial/pages/car_list/car_list.dart';
 import 'package:flutter_riverpod_tutorial/pages/on_boarding.dart';
 import 'package:flutter_riverpod_tutorial/providers/theme_provider/theme_provider.dart';
@@ -21,7 +22,8 @@ class MyApp extends StatelessWidget {
         initialRoute: OnBoarding.PATH,
         routes: <String, WidgetBuilder>{
           OnBoarding.PATH: (_) => OnBoarding(),
-          CarList.PATH: (_) => CarList()
+          CarList.PATH: (_) => CarList(),
+          CarDetail.PATH: (_) => CarDetail()
         },
       );
     });
