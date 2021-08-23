@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_riverpod_tutorial/pages/car_detail/car_detail.dart';
+import 'package:flutter_riverpod_tutorial/pages/car_list/car_provider.dart';
 import 'package:flutter_riverpod_tutorial/utils/functions.dart';
 
 class CarCard extends StatelessWidget {
@@ -26,7 +28,8 @@ class CarCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        Navigator.pushNamed(context, CarDetail.PATH, arguments: id);
+        Navigator.pushNamed(context, CarDetail.PATH, arguments: id)
+            .then((value) => context.read(carProvider.notifier).loadData());
       },
       child: Container(
         height: height,

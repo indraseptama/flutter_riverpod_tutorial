@@ -3,7 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_riverpod_tutorial/components/appbar.dart';
 import 'package:flutter_riverpod_tutorial/models/car.dart';
 import 'package:flutter_riverpod_tutorial/pages/car_list/components/car_card.dart';
-import 'package:flutter_riverpod_tutorial/providers/car_provider/car_provider.dart';
+import 'package:flutter_riverpod_tutorial/pages/car_list/car_provider.dart';
 
 class CarList extends StatelessWidget {
   static const String PATH = "carlist";
