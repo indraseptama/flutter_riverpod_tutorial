@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_riverpod_tutorial/components/appbar.dart';
 import 'package:flutter_riverpod_tutorial/models/car.dart';
 import 'package:flutter_riverpod_tutorial/pages/car_list/components/car_card.dart';
 import 'package:flutter_riverpod_tutorial/providers/car_provider/car_provider.dart';
@@ -11,20 +12,7 @@ class CarList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        elevation: 0,
-        title: Text(
-          "Cars",
-          style: TextStyle(fontWeight: FontWeight.w600, fontSize: 20),
-        ),
-        backgroundColor: Theme.of(context).scaffoldBackgroundColor,
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back),
-          onPressed: () => Navigator.of(context).pop(),
-        ),
-        actions: [],
-      ),
+      appBar: MyAppBar(),
       body: Container(
         padding: EdgeInsets.symmetric(horizontal: 32),
         child: Consumer(builder: (context, watch, child) {
