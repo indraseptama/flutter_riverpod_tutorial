@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_riverpod_tutorial/enum/mode.dart';
+import 'package:flutter_riverpod_tutorial/pages/car_list/car_list.dart';
 import 'package:flutter_riverpod_tutorial/providers/mode/mode.dart';
 import 'package:flutter_riverpod_tutorial/providers/theme_provider/theme_provider.dart';
 
@@ -58,6 +59,14 @@ class OnBoarding extends StatelessWidget {
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 32),
               child: InkWell(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => CarList(),
+                    ),
+                  );
+                },
                 child: Container(
                   padding: EdgeInsets.symmetric(vertical: 16),
                   width: double.infinity,
